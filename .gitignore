@@ -1,4 +1,8 @@
 .DS_Store
+Dataset/
+models/
+downloads/
+jupyter_notebook/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
