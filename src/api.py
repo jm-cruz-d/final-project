@@ -17,15 +17,15 @@ def upload_file():
 @app.route("/upload", methods=['POST'])
 def uploader():
  if request.method == 'POST':
-  # obtenemos el archivo del input "archivo"
+  # obtenemos el archivo del input
   f = request.files['archivo']
   filename = secure_filename(f.filename)
-  # Guardamos el archivo en el directorio "Archivos PDF"
+  # Guardamos la foto
   f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-  # Predicción aun no me funciona
+  # Predicción de la foto que hemos subido
   pred = pr.pred(os.path.join(app.config['UPLOAD_FOLDER'], filename))
   return jsonify(pred)
 
 if __name__ == '__main__':
  # Iniciamos la aplicación
- app.run(debug=True)
+ app.run(debug=True, threaded=False)
