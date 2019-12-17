@@ -3,6 +3,7 @@ Dataset/
 models/
 downloads/
 jupyter_notebook/
+downloads/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
