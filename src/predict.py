@@ -18,6 +18,6 @@ def pred(path):
     pred = model.predict(np.expand_dims(imres1,axis=0))[0]
     for i, p in enumerate(pred):
         if p > 0.5:
-            print(dirs[i], p)
+            return {dirs[i]: p}
 
-pred(path)
+print(pred(path))
