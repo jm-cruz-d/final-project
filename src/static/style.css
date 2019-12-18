@@ -63,10 +63,20 @@ p.result{
 }
 
 .boton1{
-    border: 2px solid white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border: 2px solid black;
     padding: 5px 5px;
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 20px;
     border-radius: 20px;
+}
+
+.at{
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+    opacity: 0.5;
 }
