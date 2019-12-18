@@ -17,12 +17,12 @@ def upload_file():
 @app.route("/upload", methods=['POST'])
 def uploader():
  if request.method == 'POST':
-  # obtenemos el archivo del input
+  # get image from input
   f = request.files['archivo']
   filename = secure_filename(f.filename)
-  # Guardamos la foto
+  # save image
   f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-  # Predicción de la foto que hemos subido
+  # Predicting image saved
   pred = pr.pred(os.path.join(app.config['UPLOAD_FOLDER'], filename))
   return jsonify(pred)
 
