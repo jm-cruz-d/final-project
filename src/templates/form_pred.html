@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>De Madrid al Cielo</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h2> Estás viendo --> {{pred.prediction.label}}  </h2>
+        <p>Clases válidas:</p>
+        <ul>
+        {% for item in pred.classes %}   
+            <li>{{ item|safe }}</li>
+        {% endfor %}
+        </ul>
+        <p class="result">{{pred.prediction.label}} con una probabilidad del {{pred.prediction.prob}}</p>
+        <img src="{{pics[pred.prediction.label].photo}}" width="200"/><br/>
+        <a class="boton" href="{{pics[pred.prediction.label].url}}" target="_blank"> 
+            Wikipedia </a>
+
+    </div>
+</body>
+</html>
+
