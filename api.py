@@ -2,12 +2,12 @@
 import os
 from flask import Flask, render_template, request, jsonify
 from werkzeug import secure_filename
-import predict as pr
+import src.predict as pr
 
 # instancia del objeto Flask
 app = Flask(__name__)
 # Carpeta de subida
-app.config['UPLOAD_FOLDER'] = './fotos_test'
+app.config['UPLOAD_FOLDER'] = './src/fotos_test'
 
 
 @app.route("/")

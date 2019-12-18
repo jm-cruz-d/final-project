@@ -10,7 +10,7 @@ dirs = ['Atocha', 'Monumento Alfonso XII', 'Museo Prado', 'Edificio Schweppes',
         'Puerta Alcala', 'Plaza de toros Las Ventas', 'Banco España', 'Jardin Botanico', 'Palacio Cristal']
 
 # Loading model
-model = load_model('../models/model(0.96).hdf5')
+model = load_model('./models/model(0.96).hdf5')
 
 tf_session= K.get_session()
 tf_graph = tf.get_default_graph()

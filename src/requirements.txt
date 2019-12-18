@@ -1,7 +1,0 @@
-# Necesary libraries
-
-
-
-
-# Todas las que tengo instaladas
-# pip freeze
