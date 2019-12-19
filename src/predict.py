@@ -33,7 +33,7 @@ def pred(path):
                             "classes":dirs,
                             "prediction":{
                                 "label":dirs[i],
-                                "prob": str(p)
+                                "prob": str("%0.2f" % round(p*100,2))
                             }
                         }
 

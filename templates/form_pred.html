@@ -10,14 +10,8 @@
 <body>
 
     <div class="card">
-        <h2> Estás viendo --> {{pred.prediction.label}}  </h2>
-        <p>Clases válidas:</p>
-        <ul>
-        {% for item in pred.classes %}   
-            <li>{{ item|safe }}</li>
-        {% endfor %}
-        </ul>
-        <p class="result">{{pred.prediction.label}} con una probabilidad del {{pred.prediction.prob}}</p>
+        <h2> Estás viendo &rarr; {{pred.prediction.label}}  </h2>
+        <p class="result">Con una probabilidad del {{pred.prediction.prob}}%</p>
         <img src="{{pics[pred.prediction.label].photo}}" width="200"/><br/>
         <a class="boton" href="{{pics[pred.prediction.label].url}}" target="_blank"> 
             Wikipedia </a>
