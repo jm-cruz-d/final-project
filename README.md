@@ -8,4 +8,4 @@ Una vez se tiene la base de datos en condiciones optimas se entrena el modelo us
 
 Con ello se obtuvo un porcentaje de acierto del 96% y para su aplicación se ha desarrollado una api donde puedes insertar la imagen que quieres comprobar.
 
-Los siguientes pasos a desarrollar serían la ampliación de la base de datos incluyendo más edificios y otras ciudades, y desarrollar una aplicación para su uso en móviles.
+Los siguientes pasos a desarrollar serían la ampliación de la base de datos incluyendo más edificios y otras ciudades, subirlo a heroku y desarrollar una aplicación para su uso en móviles, entre otros.
