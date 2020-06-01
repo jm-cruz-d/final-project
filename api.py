@@ -1,7 +1,7 @@
 # Importamos todo lo necesario
 import os
 from flask import Flask, render_template, request, jsonify
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 import src.predict as pr
 
 # instancia del objeto Flask
@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Carpeta de subida
 app.config['UPLOAD_FOLDER'] = './src/fotos_test'
 
-
+# En el navegador localhost:5000
 @app.route("/")
 def upload_file():
     # renderiamos la plantilla "formulario.html"

@@ -12,8 +12,10 @@ dirs = ['Atocha', 'Monumento Alfonso XII', 'Museo Prado', 'Edificio Schweppes',
 # Loading model
 model = load_model('./models/model(0.96).hdf5')
 
-tf_session= K.get_session()
-tf_graph = tf.get_default_graph()
+# esto con tensorflow == 1.14 --> tf_session= K.get_session()
+tf_session= tf.compat.v1.Session()
+# tf==1.14 --> tf_graph = tf.get_default_graph()
+tf_graph = tf.compat.v1.get_default_graph()
 
 # Predict image
 #path = '../Local-Final-project/DB.jpeg'
